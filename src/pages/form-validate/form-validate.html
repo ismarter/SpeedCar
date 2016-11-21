@@ -113,8 +113,35 @@
                     url
                 </ion-label>
                 <ion-input clearInput text-right [(ngModel)]="validateModel.url" name="url" type="text"
-                           validateURL="true" required="true"
+                           validateURL="true"
                            placeholder="请输入URL"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark">
+                    required
+                </ion-label>
+                <ion-input clearInput text-right [(ngModel)]="validateModel.required" name="required" type="text"
+                           required="true"
+                           placeholder="请输入信息（必输）"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark">
+                    minlength:8
+                </ion-label>
+                <ion-input clearInput text-right [(ngModel)]="validateModel.minlength" name="minlength" type="text"
+                           minlength="8"
+                           placeholder="请输入8位字符串"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark">
+                    maxlength:20
+                </ion-label>
+                <ion-input clearInput text-right [(ngModel)]="validateModel.maxlength" name="maxlength" type="text"
+                           maxlength="20"
+                           placeholder="请输入20位字符串"></ion-input>
             </ion-item>
 
         </ion-list>
