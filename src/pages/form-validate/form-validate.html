@@ -1,0 +1,123 @@
+<!--
+  Generated template for the FormValidate page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>表单验证</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <form #ngForm="ngForm" (submit)="submit($event,ngForm)" novalidate>
+        <ion-list>
+            <ion-item>
+                <ion-label color="dark">
+                    alnum
+                </ion-label>
+                <ion-input clearInput text-right [(ngModel)]="validateModel.alnum" name="alnum" type="text" validateAlnum="true"
+                           placeholder="请输入数字或字母"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark">
+                    amount
+                </ion-label>
+                <ion-input clearInput text-right [(ngModel)]="validateModel.amount" name="amount" type="text" validateAmount="true"
+                           placeholder="请输入金额"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark">
+                    digits
+                </ion-label>
+                <ion-input clearInput text-right [(ngModel)]="validateModel.digits" name="digits" type="text" validateDigits="true"
+                           placeholder="请输入整数"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark">
+                    email
+                </ion-label>
+                <ion-input clearInput text-right [(ngModel)]="validateModel.email" name="email" type="text" validateEmail="true"
+                           placeholder="请输入Email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark">
+                    idCard
+                </ion-label>
+                <ion-input clearInput text-right [(ngModel)]="validateModel.idCard" name="idCard" type="text" validateIDCard="true"
+                           placeholder="请输入身份证"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark">
+                    ip
+                </ion-label>
+                <ion-input clearInput text-right [(ngModel)]="validateModel.ip" name="ip" type="text" validateIP="true"
+                           placeholder="请输入ip"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark">
+                    mobile
+                </ion-label>
+                <ion-input clearInput text-right [(ngModel)]="validateModel.mobile" name="mobile" type="text" validateMobile="true"
+                           placeholder="请输入手机号"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark">
+                    postalCode
+                </ion-label>
+                <ion-input clearInput text-right [(ngModel)]="validateModel.postalCode" name="postalCode" type="text"
+                           validatePostalCode="true"
+                           placeholder="请输入邮政编码"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark">
+                    stringCn
+                </ion-label>
+                <ion-input clearInput text-right [(ngModel)]="validateModel.stringCn" name="stringCn" type="text"
+                           validateStringCN="true"
+                           placeholder="请输入中文"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark">
+                    stringEn
+                </ion-label>
+                <ion-input clearInput text-right [(ngModel)]="validateModel.stringEn" name="stringEn" type="text"
+                           validateStringEN="true"
+                           placeholder="请输入英文"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark">
+                    url
+                </ion-label>
+                <ion-input clearInput text-right [(ngModel)]="validateModel.url" name="url" type="text" validateURL="true"
+                           placeholder="请输入URL"></ion-input>
+            </ion-item>
+
+
+        </ion-list>
+
+        <div padding-horizontal>
+            <button ion-button type="submit" block clolr="primary">提交</button>
+        </div>
+
+    </form>
+
+</ion-content>
