@@ -15,7 +15,6 @@
 
 </ion-header>
 
-
 <ion-content>
 
     <form #ngForm="ngForm" (submit)="submit($event,ngForm)" novalidate>
@@ -24,7 +23,8 @@
                 <ion-label color="dark">
                     alnum
                 </ion-label>
-                <ion-input clearInput text-right [(ngModel)]="validateModel.alnum" name="alnum" type="text" validateAlnum="true"
+                <ion-input clearInput text-right [(ngModel)]="validateModel.alnum" name="alnum" type="text"
+                           validateAlnum="true"
                            placeholder="请输入数字或字母"></ion-input>
             </ion-item>
 
@@ -32,7 +32,8 @@
                 <ion-label color="dark">
                     amount
                 </ion-label>
-                <ion-input clearInput text-right [(ngModel)]="validateModel.amount" name="amount" type="text" validateAmount="true"
+                <ion-input clearInput text-right [(ngModel)]="validateModel.amount" name="amount" type="text"
+                           validateAmount="true"
                            placeholder="请输入金额"></ion-input>
             </ion-item>
 
@@ -40,7 +41,8 @@
                 <ion-label color="dark">
                     digits
                 </ion-label>
-                <ion-input clearInput text-right [(ngModel)]="validateModel.digits" name="digits" type="text" validateDigits="true"
+                <ion-input clearInput text-right [(ngModel)]="validateModel.digits" name="digits" type="text"
+                           validateDigits="true"
                            placeholder="请输入整数"></ion-input>
             </ion-item>
 
@@ -48,7 +50,8 @@
                 <ion-label color="dark">
                     email
                 </ion-label>
-                <ion-input clearInput text-right [(ngModel)]="validateModel.email" name="email" type="text" validateEmail="true"
+                <ion-input clearInput text-right [(ngModel)]="validateModel.email" name="email" type="text"
+                           validateEmail="true"
                            placeholder="请输入Email"></ion-input>
             </ion-item>
 
@@ -56,7 +59,8 @@
                 <ion-label color="dark">
                     idCard
                 </ion-label>
-                <ion-input clearInput text-right [(ngModel)]="validateModel.idCard" name="idCard" type="text" validateIDCard="true"
+                <ion-input clearInput text-right [(ngModel)]="validateModel.idCard" name="idCard" type="text"
+                           validateIDCard="true"
                            placeholder="请输入身份证"></ion-input>
             </ion-item>
 
@@ -72,7 +76,8 @@
                 <ion-label color="dark">
                     mobile
                 </ion-label>
-                <ion-input clearInput text-right [(ngModel)]="validateModel.mobile" name="mobile" type="text" validateMobile="true"
+                <ion-input clearInput text-right [(ngModel)]="validateModel.mobile" name="mobile" type="text"
+                           validateMobile="true"
                            placeholder="请输入手机号"></ion-input>
             </ion-item>
 
@@ -107,7 +112,8 @@
                 <ion-label color="dark">
                     url
                 </ion-label>
-                <ion-input clearInput text-right [(ngModel)]="validateModel.url" name="url" type="text" validateURL="true"
+                <ion-input clearInput text-right [(ngModel)]="validateModel.url" name="url" type="text"
+                           validateURL="true"
                            placeholder="请输入URL"></ion-input>
             </ion-item>
 
