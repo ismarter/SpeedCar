@@ -43,16 +43,18 @@ export class EchartsPage {
         })
 
         this.content.addTouchEndListener(($event) => {
-            console.log($event);
-            let scrollTop = this.content.getContentDimensions().scrollTop;
-            let echartsElementHight = this.echartsElement.nativeElement.getBoundingClientRect().height;
-            if (scrollTop < echartsElementHight / 2) {
-                console.log("scrollToTop")
-                this.content.scrollTo(0, 0, 300);
-            } else {
-                console.log("scrollToBottom")
-                this.content.scrollTo(0, echartsElementHight, 300);
-            }
+            setTimeout(() => {
+                let scrollTop = this.content.getContentDimensions().scrollTop;
+                let echartsElementHight = this.echartsElement.nativeElement.getBoundingClientRect().height;
+                if (scrollTop < echartsElementHight / 2) {
+                    console.log("scrollToTop")
+                    this.content.scrollTo(0, 0, 300);
+                } else {
+                    console.log("scrollToBottom")
+                    this.content.scrollTo(0, echartsElementHight, 300);
+                }
+            }, 300)
+
         });
     }
 
