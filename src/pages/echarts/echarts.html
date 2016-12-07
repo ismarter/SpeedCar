@@ -46,7 +46,7 @@
 <ion-content #content>
 
 
-    <div #ECHARTS style="width: 100%;height: 61.8%;"></div>
+    <div #ECHARTS style="width: 100%;height: 61.8%;pointer-events: none;" (swipe)="contentSwipe($event)"></div>
 
     <ion-toolbar color="light" no-border>
         <ion-item-divider color="light" no-lines no-border text-center tappable (click)="slideScroll($event)">

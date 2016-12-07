@@ -37,6 +37,23 @@ export class EchartsPage {
 
     ionViewDidLoad() {
         console.log('Hello EchartsPage Page');
+
+        this.content.addScrollListener(($event) => {
+            console.log($event);
+        })
+
+        this.content.addTouchEndListener(($event) => {
+            console.log($event);
+            let scrollTop = this.content.getContentDimensions().scrollTop;
+            let echartsElementHight = this.echartsElement.nativeElement.getBoundingClientRect().height;
+            if (scrollTop < echartsElementHight / 2) {
+                console.log("scrollToTop")
+                this.content.scrollTo(0, 0, 300);
+            } else {
+                console.log("scrollToBottom")
+                this.content.scrollTo(0, echartsElementHight, 300);
+            }
+        });
     }
 
     ionViewDidEnter() {
@@ -119,8 +136,16 @@ export class EchartsPage {
 
     slideScroll($event) {
         let scrollTop = this.content.getContentDimensions().scrollTop;
-        let scrollHeight = this.content.getContentDimensions().scrollHeight;
-        this.content.scrollToTop(300);
+        let echartsElementHight = this.echartsElement.nativeElement.getBoundingClientRect().height;
+        if (scrollTop > echartsElementHight / 2) {
+            this.content.scrollTo(0, 0, 300);
+        } else {
+            this.content.scrollTo(0, echartsElementHight, 300);
+        }
+    }
+
+    contentSwipe($event) {
+        console.log($event)
     }
 
 }
