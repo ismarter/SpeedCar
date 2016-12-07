@@ -1,0 +1,69 @@
+<!--
+  Generated template for the Echarts page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>图表</ion-title>
+    </ion-navbar>
+
+    <ion-toolbar no-border no-shadow color="light">
+
+        <ion-fab left middle>
+            <button color="light" mini ion-fab icon-only clear (click)="buttonDateBack($event)">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-fab>
+        <ion-slides [options]="{initialSlide:dateList.length-1}" #dateSlider (ionWillChange)="ionWillChange($event);"
+                    (ionDidChange)="ionDidChange($event)">
+
+            <ion-slide *ngFor="let dateItem of dateList">
+                <ion-item-divider color="light" no-lines no-border>
+                    <h2 text-center>{{dateItem}}</h2>
+                </ion-item-divider>
+            </ion-slide>
+
+
+        </ion-slides>
+
+        <ion-fab right middle>
+            <button color="light" mini ion-fab icon-only clear (click)="buttonDateForward($event)">
+                <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+        </ion-fab>
+
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content #content>
+
+
+    <div #ECHARTS style="width: 100%;height: 61.8%;"></div>
+
+    <ion-toolbar color="light" no-border>
+        <ion-item-divider color="light" no-lines no-border text-center tappable (click)="slideScroll($event)">
+            其他报销：2500，000.00元
+        </ion-item-divider>
+    </ion-toolbar>
+
+    <ion-scroll style="height: calc(100% - 56px);" [scrollY]="true">
+
+        <ion-list>
+            <ion-item *ngFor="let dateItem of dateList">
+                <ion-icon item-left name="ios-car" color="danger"></ion-icon>
+                <h2>{{dateItem}}</h2>
+            </ion-item>
+        </ion-list>
+
+
+    </ion-scroll>
+
+</ion-content>

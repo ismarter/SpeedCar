@@ -2,6 +2,7 @@ import {Component, ViewChild} from '@angular/core';
 import {Nav, Platform} from 'ionic-angular';
 import {StatusBar, Splashscreen} from 'ionic-native';
 import {FormValidatePage} from "../pages/form-validate/form-validate";
+import {EchartsPage} from "../pages/echarts/echarts";
 
 
 @Component({
@@ -10,7 +11,7 @@ import {FormValidatePage} from "../pages/form-validate/form-validate";
 export class MyApp {
     @ViewChild(Nav) nav: Nav;
 
-    rootPage: any = FormValidatePage;
+    rootPage: any = EchartsPage;
 
     pages: Array<{title: string, component: any}>;
 
@@ -19,7 +20,8 @@ export class MyApp {
 
         // used for an example of ngFor and navigation
         this.pages = [
-            {title: '表单验证', component: FormValidatePage}
+            {title: '表单验证', component: FormValidatePage},
+            {title: '图标', component: EchartsPage}
         ];
 
     }

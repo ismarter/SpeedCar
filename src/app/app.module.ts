@@ -3,11 +3,13 @@ import {IonicApp, IonicModule} from 'ionic-angular';
 import {MyApp} from './app.component';
 import {FormValidatePage} from "../pages/form-validate/form-validate";
 import {FormValidateModule} from "../modules/form-validator/module";
+import {EchartsPage} from "../pages/echarts/echarts";
 
 @NgModule({
     declarations: [
         MyApp,
-        FormValidatePage
+        FormValidatePage,
+        EchartsPage
     ],
     imports: [
         FormValidateModule,
@@ -16,7 +18,8 @@ import {FormValidateModule} from "../modules/form-validator/module";
     bootstrap: [IonicApp],
     entryComponents: [
         MyApp,
-        FormValidatePage
+        FormValidatePage,
+        EchartsPage
     ],
     providers: []
 })

@@ -13,4 +13,4 @@
  */
 declare module '*';
 
-declare module 'angular2-form-validator'
+declare module 'echarts'
