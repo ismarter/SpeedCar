@@ -49,6 +49,7 @@ export class ChartPage {
         this.content.addTouchEndListener(($event) => {
 
             if (this.platform.is('android')) {
+                console.log("android")
                 let scrollTop = this.content.getContentDimensions().scrollTop;
                 let echartsElementHight = this.echartsElement.nativeElement.getBoundingClientRect().height;
                 if (scrollTop < echartsElementHight / 2) {
@@ -183,5 +184,6 @@ export class ChartPage {
     contentSwipe($event) {
         console.log($event)
     }
+
 
 }
