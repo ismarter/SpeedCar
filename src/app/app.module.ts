@@ -4,12 +4,14 @@ import {MyApp} from './app.component';
 import {FormValidatePage} from "../pages/form-validate/form-validate";
 import {FormValidateModule} from "../modules/form-validator/module";
 import {EchartsPage} from "../pages/echarts/echarts";
+import {ChartPage} from "../pages/chart/chart";
 
 @NgModule({
     declarations: [
         MyApp,
         FormValidatePage,
-        EchartsPage
+        EchartsPage,
+        ChartPage
     ],
     imports: [
         FormValidateModule,
@@ -19,7 +21,8 @@ import {EchartsPage} from "../pages/echarts/echarts";
     entryComponents: [
         MyApp,
         FormValidatePage,
-        EchartsPage
+        EchartsPage,
+        ChartPage
     ],
     providers: []
 })

@@ -10,13 +10,13 @@
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>图表</ion-title>
+        <ion-title>图表－ECharts</ion-title>
     </ion-navbar>
 
     <ion-toolbar no-border no-shadow color="light">
 
         <ion-fab left middle>
-            <button color="light" mini ion-fab icon-only clear (click)="buttonDateBack($event)">
+            <button mode="ios" color="light" mini ion-fab icon-only clear (click)="buttonDateBack($event)">
                 <ion-icon name="arrow-back"></ion-icon>
             </button>
         </ion-fab>
@@ -33,7 +33,7 @@
         </ion-slides>
 
         <ion-fab right middle>
-            <button color="light" mini ion-fab icon-only clear (click)="buttonDateForward($event)">
+            <button mode="ios" color="light" mini ion-fab icon-only clear (click)="buttonDateForward($event)">
                 <ion-icon name="arrow-forward"></ion-icon>
             </button>
         </ion-fab>
@@ -48,13 +48,13 @@
 
     <div #ECHARTS style="width: 100%;height: 61.8%;" (swipe)="contentSwipe($event)"></div>
 
-    <ion-toolbar color="light" no-border>
+    <ion-toolbar mode="ios" color="light" no-border>
         <ion-item-divider color="light" no-lines no-border text-center tappable (click)="slideScroll($event)">
             其他报销：2500，000.00元
         </ion-item-divider>
     </ion-toolbar>
 
-    <ion-scroll style="height: calc(100% - 56px);" [scrollY]="true">
+    <ion-scroll style="height: calc(100% - 50px);" [scrollY]="true">
 
         <ion-list>
             <ion-item *ngFor="let dateItem of dateList">

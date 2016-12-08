@@ -1,5 +1,5 @@
 import {Component, ViewContainerRef, ViewChild, ElementRef} from '@angular/core';
-import {NavController, Slides, Content} from 'ionic-angular';
+import {NavController, Slides, Content, Platform} from 'ionic-angular';
 import echarts from 'echarts';
 import {Http} from "@angular/http";
 
@@ -25,7 +25,7 @@ export class EchartsPage {
 
     private echarts: any = null
 
-    constructor(public navCtrl: NavController, private  viewContainerRef: ViewContainerRef, http: Http) {
+    constructor(public platform: Platform, public navCtrl: NavController, private  viewContainerRef: ViewContainerRef, http: Http) {
         let nowDate = new Date();
         this.dateList.unshift(nowDate.getFullYear() + "-" + (nowDate.getMonth() + 1));
         for (let i = 0; i < 24; i++) {
@@ -53,7 +53,7 @@ export class EchartsPage {
                     console.log("scrollToBottom")
                     this.content.scrollTo(0, echartsElementHight, 300);
                 }
-            }, 300)
+            }, 500)
 
         });
     }

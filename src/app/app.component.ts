@@ -3,6 +3,7 @@ import {Nav, Platform} from 'ionic-angular';
 import {StatusBar, Splashscreen} from 'ionic-native';
 import {FormValidatePage} from "../pages/form-validate/form-validate";
 import {EchartsPage} from "../pages/echarts/echarts";
+import {ChartPage} from "../pages/chart/chart";
 
 
 @Component({
@@ -21,7 +22,8 @@ export class MyApp {
         // used for an example of ngFor and navigation
         this.pages = [
             {title: '表单验证', component: FormValidatePage},
-            {title: '图标', component: EchartsPage}
+            {title: '图表－ECharts', component: EchartsPage},
+            {title: '图表－Chart', component: ChartPage}
         ];
 
     }
