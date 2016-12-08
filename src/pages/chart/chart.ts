@@ -14,7 +14,6 @@ import {Http} from "@angular/http";
 })
 export class ChartPage {
 
-
     @ViewChild('ECHARTS') echartsElement: ElementRef;
 
     @ViewChild('dateSlider') dateSlider: Slides;
@@ -40,14 +39,16 @@ export class ChartPage {
     }
 
     ionViewDidLoad() {
-        console.log('Hello EchartsPage Page');
 
-        this.content.addScrollListener(($event) => {
-            console.log($event);
-        })
+        this.content.addTouchStartListener(($event) => {
 
+        });
+        this.content.addTouchMoveListener(($event) => {
+
+        });
         this.content.addTouchEndListener(($event) => {
-            setTimeout(() => {
+
+            if (this.platform.is('android')) {
                 let scrollTop = this.content.getContentDimensions().scrollTop;
                 let echartsElementHight = this.echartsElement.nativeElement.getBoundingClientRect().height;
                 if (scrollTop < echartsElementHight / 2) {
@@ -57,12 +58,10 @@ export class ChartPage {
                     console.log("scrollToBottom")
                     this.content.scrollTo(0, echartsElementHight, 300);
                 }
-            }, 500)
+            }
 
         });
-    }
 
-    ionViewWillEnter() {
         let element = this.echartsElement.nativeElement;
         element.addEventListener("touchstart", function (event) {
             event.stopPropagation();
@@ -82,10 +81,11 @@ export class ChartPage {
         })
     }
 
+    ionViewWillEnter() {
+
+    }
+
     ionViewDidEnter() {
-        console.log(this.echartsElement);
-        console.log(this.viewContainerRef);
-        console.log(echarts);
 
         this.echarts = echarts.init(this.echartsElement.nativeElement);
 

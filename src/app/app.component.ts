@@ -12,7 +12,7 @@ import {ChartPage} from "../pages/chart/chart";
 export class MyApp {
     @ViewChild(Nav) nav: Nav;
 
-    rootPage: any = EchartsPage;
+    rootPage: any = ChartPage;
 
     pages: Array<{title: string, component: any}>;
 
