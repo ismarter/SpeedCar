@@ -62,6 +62,26 @@ export class EchartsPage {
         });
     }
 
+    ionViewWillEnter() {
+        let element = this.echartsElement.nativeElement;
+        element.addEventListener("touchstart", function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+        })
+        element.addEventListener("touchmove", function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+        })
+        element.addEventListener("touchend", function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+        })
+        element.addEventListener("touchcancel", function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+        })
+    }
+
     ionViewDidEnter() {
         console.log(this.echartsElement);
         console.log(this.viewContainerRef);
