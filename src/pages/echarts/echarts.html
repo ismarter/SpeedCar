@@ -15,28 +15,33 @@
 
     <ion-toolbar no-border no-shadow color="light">
 
-        <ion-fab left middle>
-            <button mode="ios" color="light" mini ion-fab icon-only clear (click)="buttonDateBack($event)">
-                <ion-icon name="arrow-back"></ion-icon>
-            </button>
-        </ion-fab>
-        <ion-slides [options]="{initialSlide:dateList.length-1}" #dateSlider (ionWillChange)="ionWillChange($event);"
-                    (ionDidChange)="ionDidChange($event)">
+        <ion-row no-padding>
+            <ion-col center no-padding>
+                <button ion-button block icon-only [disabled]="buttonDateBackDisabled" clear
+                        (click)="buttonDateBack($event)">
+                    <ion-icon color="dark" name="arrow-back"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col center no-padding width-66>
+                <ion-slides [options]="{initialSlide:dateList.length-1}" #dateSlider
+                            (ionWillChange)="ionWillChange($event);"
+                            (ionDidChange)="ionDidChange($event)">
 
-            <ion-slide *ngFor="let dateItem of dateList">
-                <ion-item-divider color="light" no-lines no-border>
-                    <h2 text-center>{{dateItem}}</h2>
-                </ion-item-divider>
-            </ion-slide>
+                    <ion-slide *ngFor="let dateItem of dateList">
+                        <ion-item-divider color="light" no-lines no-border>
+                            <h2 text-center>{{dateItem}}</h2>
+                        </ion-item-divider>
+                    </ion-slide>
+                </ion-slides>
+            </ion-col>
+            <ion-col center no-padding>
 
+                <button ion-button block icon-only [disabled]="buttonDateForwardDisabled" clear (click)="buttonDateForward($event)">
+                    <ion-icon color="dark" name="arrow-forward"></ion-icon>
+                </button>
 
-        </ion-slides>
-
-        <ion-fab right middle>
-            <button mode="ios" color="light" mini ion-fab icon-only clear (click)="buttonDateForward($event)">
-                <ion-icon name="arrow-forward"></ion-icon>
-            </button>
-        </ion-fab>
+            </ion-col>
+        </ion-row>
 
     </ion-toolbar>
 

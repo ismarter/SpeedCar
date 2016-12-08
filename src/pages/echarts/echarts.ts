@@ -23,7 +23,11 @@ export class EchartsPage {
 
     dateList: Array<string> = [];
 
-    private echarts: any = null
+    private echarts: any = null;
+
+    buttonDateBackDisabled: boolean = false;
+
+    buttonDateForwardDisabled: boolean = true;
 
     constructor(public platform: Platform, public navCtrl: NavController, private  viewContainerRef: ViewContainerRef, http: Http) {
         let nowDate = new Date();
@@ -129,7 +133,17 @@ export class EchartsPage {
 
     ionWillChange($event) {
         console.log($event);
+        if ($event.activeIndex == this.dateList.length - 1) {
+            this.buttonDateForwardDisabled = true;
+        } else {
+            this.buttonDateForwardDisabled = false;
+        }
 
+        if ($event.activeIndex == 0) {
+            this.buttonDateBackDisabled = true;
+        } else {
+            this.buttonDateBackDisabled = false;
+        }
     }
 
     ionDidChange($event) {
