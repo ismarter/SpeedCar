@@ -5,13 +5,15 @@ import {FormValidatePage} from "../pages/form-validate/form-validate";
 import {FormValidateModule} from "../modules/form-validator/module";
 import {EchartsPage} from "../pages/echarts/echarts";
 import {ChartPage} from "../pages/chart/chart";
+import {IconsPage} from "../pages/icons/icons";
 
 @NgModule({
     declarations: [
         MyApp,
         FormValidatePage,
         EchartsPage,
-        ChartPage
+        ChartPage,
+        IconsPage
     ],
     imports: [
         FormValidateModule,
@@ -22,7 +24,8 @@ import {ChartPage} from "../pages/chart/chart";
         MyApp,
         FormValidatePage,
         EchartsPage,
-        ChartPage
+        ChartPage,
+        IconsPage
     ],
     providers: []
 })

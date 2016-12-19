@@ -4,6 +4,7 @@ import {StatusBar, Splashscreen} from 'ionic-native';
 import {FormValidatePage} from "../pages/form-validate/form-validate";
 import {EchartsPage} from "../pages/echarts/echarts";
 import {ChartPage} from "../pages/chart/chart";
+import {IconsPage} from "../pages/icons/icons";
 
 
 @Component({
@@ -12,7 +13,7 @@ import {ChartPage} from "../pages/chart/chart";
 export class MyApp {
     @ViewChild(Nav) nav: Nav;
 
-    rootPage: any = EchartsPage;
+    rootPage: any = IconsPage;
 
     pages: Array<{title: string, component: any}>;
 
@@ -23,7 +24,9 @@ export class MyApp {
         this.pages = [
             {title: '表单验证', component: FormValidatePage},
             {title: '图表－ECharts', component: EchartsPage},
-            {title: '图表－Chart', component: ChartPage}
+            {title: '图表－Chart', component: ChartPage},
+            {title: '图标－svg', component: IconsPage},
+
         ];
 
     }

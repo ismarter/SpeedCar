@@ -1,0 +1,16 @@
+<svg id="住宿.svg" xmlns="http://www.w3.org/2000/svg" width="70" height="68" viewBox="0 0 70 68">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #ee5b55;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="矩形_43" data-name="矩形 43" class="cls-1" x="40" y="21" width="30" height="5"/>
+  <path id="矩形_43_拷贝" data-name="矩形 43 拷贝" class="cls-2" d="M380,454h30v38H380V454Zm8.984,23h13v15h-13v-15Z" transform="translate(-340 -424)"/>
+  <path id="矩形_43_拷贝_2" data-name="矩形 43 拷贝 2" class="cls-2" d="M340,492V424h35v68H340Zm13-57.988h-8.007v7H353v-7ZM353,450h-8.007v7H353v-7Zm17.014-15.984h-8.007v7h8.007v-7Z" transform="translate(-340 -424)"/>
+</svg>

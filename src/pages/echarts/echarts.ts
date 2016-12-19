@@ -363,6 +363,7 @@ export class EchartsPage {
                     name: '消费分析',
                     type: 'pie',
                     center: ['50%', '50%'],
+                    selectedMode: 'single',
                     radius: ['35%', '70%'],
                     avoidLabelOverlap: false,
                     label: {

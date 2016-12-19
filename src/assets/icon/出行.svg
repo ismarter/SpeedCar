@@ -1,0 +1,21 @@
+<svg id="出行.svg" xmlns="http://www.w3.org/2000/svg" width="70" height="59" viewBox="0 0 70 70">
+    <defs>
+        <style>
+            .cls-1, .cls-2 {
+            fill: #1b89d0;
+            }
+
+            .cls-2 {
+            fill-rule: evenodd;
+            }
+        </style>
+    </defs>
+    <rect id="矩形_56" data-name="矩形 56" class="cls-1" x="6" y="53" width="12" height="6"/>
+    <rect id="矩形_56_拷贝" data-name="矩形 56 拷贝" class="cls-1" x="52" y="53" width="12" height="6"/>
+    <path id="矩形_57" data-name="矩形 57" class="cls-2"
+          d="M159.947,452.816l-2-14.824H115.081l-3.028,14.824h-6.141l3.109-17.566,2.857-3.25H160.21c2.151,0,2.194,1.224,2.194,1.224s1.4,0.269,1.662,2.455c0.7,5.977,2.022,17.137,2.022,17.137h-6.141Z"
+          transform="translate(-101 -432)"/>
+    <path id="矩形_55" data-name="矩形 55" class="cls-2"
+          d="M167,485H105a4,4,0,0,1-4-4V456a4,4,0,0,1,4-4h62a4,4,0,0,1,4,4v25A4,4,0,0,1,167,485Zm-1.006-20H155v3.983H117V472h49v-7Zm-59.988,0H117v7h-10.99v-7Z"
+          transform="translate(-101 -432)"/>
+</svg>
